@@ -44,6 +44,12 @@ public class CacheConfiguration {
             cm.createCache(ro.db.springboot.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(ro.db.springboot.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(ro.db.springboot.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(ro.db.springboot.domain.Job.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
